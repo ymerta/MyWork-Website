@@ -1,0 +1,145 @@
+/* src/styles/Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #b8d1ed, #de3d3d40);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 1000;
+  justify-content: center;
+  overflow-y: auto; /* Ensure scrolling on overflow */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-header img {
+  width: auto;
+  height: 3rem;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 100vh;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+.sidebar-nav.hidden {
+  max-height: 0;
+  opacity: 0;
+}
+
+.sidebar-item {
+  margin-bottom: 15px;
+  margin-right: 3rem;
+  position: relative;
+  width: 14.4rem;
+  border-top-left-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+  height: 4rem;
+}
+
+.sidebar-item a {
+  margin-left: 1rem;
+  padding-top: 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s;
+  display: flex;
+  position: relative;
+}
+
+.sidebar-item a img {
+  margin-right: 10px;
+}
+
+.sidebar-item a:hover {
+  color: #a15ff4;
+}
+
+.sidebar-item.active {
+  position: relative;
+  background-color: aliceblue;
+}
+
+.sidebar-item.active a {
+  color: #a15ff4;
+  font-weight: bold;
+}
+
+.sidebar-footer {
+  display: grid;
+  position: relative;
+  text-align: center;
+  margin-top: auto;
+}
+
+.sidebar-footer a {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.sidebar-footer a:hover {
+  color: #a15ff4;
+}
+
+.navbar-b {
+  justify-content: center;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 70px; /* Collapse sidebar width */
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-item {
+    width: auto;
+    text-align: center;
+  }
+
+  .sidebar-item a {
+    justify-content: center;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .navbar-b {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+  }
+
+  .sidebar-nav.hidden {
+    display: none; /* Hide the list items on small screens */
+  }
+
+  .sidebar-footer {
+    margin-top: 1rem;
+  }
+}

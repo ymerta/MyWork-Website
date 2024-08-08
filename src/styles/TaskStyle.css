@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Mohave';
+  src: url('../Fonts/Mohave-Regular.ttf') format('truetype');
+}
+
+.task-card-container {
+  margin-left: 260px; 
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 80px); 
+  box-sizing: border-box;
+  font-family: 'Mohave', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.task-card {
+  width: 100%;
+  max-width: 70rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #F5DAFF99;
+  padding: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 50px;
+}
+
+.task-table-container {
+  max-height: 60vh; 
+  overflow-y: auto; 
+  border-radius: 15px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; 
+}
+
+.task-table th {
+  padding: 12px 15px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  border-bottom: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #A15FF480;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.task-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-right: 2px dotted #333; 
+  background-color: #ffffff;
+}
+
+.project-name {
+  font-weight: bold;
+  background-color: #c2e9f3a7;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.task-key {
+  font-weight: bold;
+  background-color: #eda4f0a7;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.task-summary {
+  border-radius: 0;
+}
+
+.task-comment {
+  font-weight: bold;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.task-status.to-do {
+  color: #f54242;
+}
+
+.task-status.done {
+  color: #28a745;
+}
+
+.task-status.in-progress {
+  color: #007bff;
+}
+
+.task-assignee {
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .task-card {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 8px 10px;
+  }
+}

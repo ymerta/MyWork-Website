@@ -1,0 +1,117 @@
+
+.tasks-section {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  height: 60%;
+  width: 40rem;
+  background: linear-gradient(to bottom, #b8d1ed, #de3d3d40);
+  overflow-y: auto;
+}
+
+.task-card-body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.task-card-body > h3 {
+  font-size: 1.5rem;
+}
+
+.task-card-body > p {
+  font-size: 1.2rem;
+}
+
+.task-table-container {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.task-section-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+
+.task-section-table th {
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #a25ff4a0;
+  color: #ffffff;
+}
+
+.task-section-table td {
+  text-align: center;
+  border-right: 2px dotted #333; 
+  border-left: 2px dotted #333;
+  background-color: #ffffff;
+}
+
+
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-percentage {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status.in-progress,
+.progress-bar.in-progress {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.status.completed,
+.progress-bar.completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status.not-started,
+.progress-bar.not-started {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .tasks-section,
+  .person-list-section {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
